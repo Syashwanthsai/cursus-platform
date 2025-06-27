@@ -40,6 +40,30 @@ const Sidebar = () => (
             Profile
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/dashboard/my-learning"
+            className={({ isActive }) =>
+              `block px-6 py-2 rounded transition ${
+                isActive ? "bg-gray-700 font-semibold" : "hover:bg-gray-800"
+              }`
+            }
+          >
+            My Learning
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/dashboard/my-payments"
+            className={({ isActive }) =>
+              `block px-6 py-2 rounded transition ${
+                isActive ? "bg-gray-700 font-semibold" : "hover:bg-gray-800"
+              }`
+            }
+          >
+            My Payments
+          </NavLink>
+        </li>
       </ul>
     </nav>
     <div className="px-6 mt-auto">

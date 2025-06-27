@@ -83,6 +83,8 @@ import PublicRoute from "../utils/PublicRoute.jsx";
 import EnrollPage from "../pages/EnrollPage.jsx";
 import Profile from "../pages/Profile.jsx";
 import CourseDetailsPage from "../pages/CourseDetailView.jsx";
+import MyLearning from "../pages/MyLearning.jsx";
+import MyPayments from "../pages/MyPayments.jsx";
 import { getUserRole } from "../utils/auth"; // ✅ NEW
 
 const AppRoutes = () => {
@@ -176,6 +178,26 @@ const AppRoutes = () => {
             <ProtectedRoute>
               <DashboardLayout>
                 <Profile />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/my-learning"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <MyLearning />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/my-payments"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <MyPayments />
               </DashboardLayout>
             </ProtectedRoute>
           }
